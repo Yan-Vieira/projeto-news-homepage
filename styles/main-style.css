@@ -1,0 +1,142 @@
+@charset "UTF-8";
+
+/*IMPORTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); /*font-family: Inter*/
+
+/*PRE-CONFIG*/
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --primary_1: hsl(35, 77%, 62%);
+
+    --color_1: hsl(36, 100%, 99%);
+    --color_2: hsl(233, 8%, 79%);
+    --color_3: hsl(236, 13%, 42%);
+    --color_4: hsl(240, 100%, 5%);
+}
+
+/*FROM BODY*/
+
+body{
+    width: fit-content;
+    height: fit-content;
+
+    margin: 1% 10%;
+
+    font-family: "Inter";
+}
+
+/*FROM HEADER*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+header img#site-logo{
+    max-width: 10%;
+    min-width: 5%;
+}
+
+/*FROM NAV*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+
+    /*margin-right: 8%;*/
+
+    font-family: "Inter";
+    font-size: 15px;
+}
+
+nav > button{
+    background-color: transparent;
+}
+
+/*FROM MAIN*/
+
+main{
+    display: grid;
+    grid-template-areas:
+    'headline-image headline-image news-column'
+    'main-news main-news news-column'
+    'other-news other-news other-news';
+
+    gap: 30px;
+}
+
+/**/
+main > section#headline-image{
+    grid-area: headline-image;
+    width: 100%;
+    height: 100%;
+    
+}
+main > section#headline-image > img{
+    width: 100%;
+    height: 100%;
+}
+/**/
+
+main > section#main-news{
+    grid-area: main-news;
+    display: flex;
+    flex-direction: row;
+}
+
+/**/
+main > section#news-column{
+    grid-area: news-column;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 20px;
+    color: var(--color_1);
+    background-color: var(--color_4);
+}
+
+main > section#news-column > h1{
+    font-size: 2.5em;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    color: var(--primary_1);
+}
+
+main > section#news-column > section{
+    margin: 10px;
+}
+
+main > section#news-column > section > h2{
+    margin: 10px 0px;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+main > section#news-column > span{
+    border-top: 1px solid hsla(0, 0%, 100%, 0.3);
+}
+/**/
+
+main > section#other-news {
+    grid-area: other-news;
+    display: flex;
+    flex-direction: row;
+}
