@@ -16,6 +16,7 @@
 
 :root{
     --primary_1: hsl(35, 77%, 62%);
+    --primary_2: hsl(5, 85%, 63%);
 
     --color_1: hsl(36, 100%, 99%);
     --color_2: hsl(233, 8%, 79%);
@@ -29,7 +30,7 @@ body{
     width: fit-content;
     height: fit-content;
 
-    margin: 1% 10%;
+    margin: 1% 15%;
 
     font-family: "Inter";
 }
@@ -42,12 +43,11 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 header img#site-logo{
-    max-width: 10%;
-    min-width: 5%;
+    max-width: 5%;
 }
 
 /*FROM NAV*/
@@ -56,9 +56,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 30%;
-
-    /*margin-right: 8%;*/
+    width: 40%;
 
     font-family: "Inter";
     font-size: 15px;
@@ -66,6 +64,11 @@ nav{
 
 nav > button{
     background-color: transparent;
+
+    color: var(--color_3);
+}
+nav > button:active{
+    color: var(--primary_2);
 }
 
 /*FROM MAIN*/
@@ -77,7 +80,7 @@ main{
     'main-news main-news news-column'
     'other-news other-news other-news';
 
-    gap: 30px;
+    gap: 20px;
 }
 
 /**/
@@ -95,8 +98,48 @@ main > section#headline-image > img{
 
 main > section#main-news{
     grid-area: main-news;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-areas:
+    'title content'
+    'title button';
+    align-items: normal;
+    justify-items: start;
+    max-width: 80%;
+}
+
+main > section#main-news > h1{
+    grid-area: title;
+    max-width: 80%;
+
+    font-size: 2.1em;
+    font-weight: 800;
+    line-height: 1;
+
+    color: var(--color_4);
+}
+
+main > section#main-news > p{
+    grid-area: content;
+
+    font-size: 0.8em;
+
+    color: var(--color_3);
+}
+
+main > section#main-news > button{
+    grid-area: button;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 10px 25px;
+
+    font-size: 0.8em;
+
+    color: white;
+    background-color: var(--primary_2);
+}
+main > section#main-news > button:active{
+    background-color: var(--color_4);
 }
 
 /**/
@@ -128,6 +171,8 @@ main > section#news-column > section > h2{
     margin: 10px 0px;
     font-size: 15px;
     font-weight: 400;
+
+    color: var(--color_2);
 }
 
 main > section#news-column > span{
@@ -139,4 +184,68 @@ main > section#other-news {
     grid-area: other-news;
     display: flex;
     flex-direction: row;
+    align-content: space-between;
+}
+
+main > section#other-news > section{
+    display: grid;
+    grid-template-areas:
+    'image number'
+    'image title'
+    'image content';
+    align-items: start;
+    grid-auto-rows: 30px;
+    gap: 10px;
+}
+
+main > section#other-news > section > img{
+    grid-area: image;
+    height: 100%;
+}
+
+main > section#other-news > section > span.number{
+    grid-area: number;
+
+    font-size: 1.4em;
+    font-weight: 800;
+
+    color: var(--color_2);
+}
+
+main > section#other-news > section > h1{
+    grid-area: title;
+
+    font-size: 1em;
+
+    color: var(--color_4);
+}
+
+main > section#other-news > section > p{
+    grid-area: content;
+
+    font-size: smaller;
+}
+/**/
+
+/*FROM FOOTER*/
+
+footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 11px;
+}
+
+footer > div{
+    color: var(--color_2);
+    
+    font-size: 0.8em;
+}
+
+footer > div a{
+    text-decoration: none;
+
+    color: var(--primary_1);
+}
+footer > div a:active{
+    color: var(--primary_2);
 }
