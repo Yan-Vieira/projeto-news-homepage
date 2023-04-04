@@ -1,0 +1,46 @@
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+header img#site-logo{
+    max-width: 50px;
+}
+
+header > button#menu-button{
+    background-color: transparent;
+    width: 40px;
+}
+
+header > button#menu-button > img{
+    width: 100%;
+    height: 100%;
+}
+
+/*FROM NAV*/
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 40%;
+
+    font-family: "Inter";
+    font-size: 15px;
+}
+
+nav > button{
+    background-color: transparent;
+
+    color: var(--color_3);
+}
+nav > button:hover{
+    color: var(--primary_1);
+}
+nav > button:active{
+    color: var(--primary_2);
+}

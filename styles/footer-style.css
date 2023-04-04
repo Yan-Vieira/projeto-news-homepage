@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    justify-content: center;
+    margin: 11px;
+}
+
+footer > div{
+    color: var(--color_2);
+    
+    font-size: 0.8em;
+}
+
+footer > div a{
+    text-decoration: none;
+
+    color: var(--primary_1);
+}
+footer > div a:active{
+    color: var(--primary_2);
+}

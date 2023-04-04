@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/*IMPORTS*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); /*font-family: Inter*/
+
+/*PRE-CONFIG*/
+
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+
+:root{
+    --primary_1: hsl(35, 77%, 62%);
+    --primary_2: hsl(5, 85%, 63%);
+    --highlight_1: hsl(5, 85%, 70%);
+
+    --color_1: hsl(36, 100%, 99%);
+    --color_2: hsl(233, 8%, 79%);
+    --color_3: hsl(236, 13%, 42%);
+    --color_4: hsl(240, 100%, 5%);
+}
+
+/*FROM BODY*/
+
+body{
+    width: fit-content;
+    height: fit-content;
+
+    margin: 1% 15%;
+
+    font-family: "Inter";
+}
+
+/*MOBILE MENU*/
+
+section#mobile-menu{
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+section#mobile-menu > div#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+
+    background-color: white;
+}
+
+section#mobile-menu > div#shadow{
+    width: 40%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+
+    background-color: hsla(0, 0%, 0%, 0.4);
+}
+
+section#mobile-menu > div#menu > img{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    margin: 30px 30px 0px 0px;
+    
+}
+
+section#mobile-menu > div#menu > button{
+    width: fit-content;
+    height: fit-content;
+
+    margin: 20px 60px;
+
+    font-size: 1.5em;
+
+    background-color: transparent;
+}
